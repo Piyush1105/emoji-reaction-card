@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/emoji-reaction-card/static/css/main.21e40d37.css",
+    "main.js": "/emoji-reaction-card/static/js/main.b29e9919.js",
+    "static/media/coffee.jpg": "/emoji-reaction-card/static/media/coffee.a324ffacd94b09e3eba6.jpg",
+    "index.html": "/emoji-reaction-card/index.html",
+    "main.21e40d37.css.map": "/emoji-reaction-card/static/css/main.21e40d37.css.map",
+    "main.b29e9919.js.map": "/emoji-reaction-card/static/js/main.b29e9919.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.21e40d37.css",
+    "static/js/main.b29e9919.js"
+  ]
+}

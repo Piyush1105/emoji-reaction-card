@@ -12,7 +12,6 @@ import SentimentNeutralIcon from "@mui/icons-material/SentimentNeutral";
 const TooltipBody = () => {
   const handleChange = (e) => {
     setIcon("");
-    console.log(e);
   };
 
   const [icon, setIcon] = useState("");

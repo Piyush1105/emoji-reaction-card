@@ -13,21 +13,10 @@ import {
 } from "@mui/material";
 import "./card.css";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import { ThumbUpSharp } from "@mui/icons-material";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
-import Tooltip from "@mui/material/Tooltip";
+import TooltipBody from "./TooltipBody";
 
 const Cards = () => {
-  const [open, setOpen] = React.useState(false);
-
-  const handleTooltipClose = () => {
-    setOpen(false);
-  };
-
-  const handleTooltipOpen = () => {
-    setOpen(true);
-  };
   return (
     <div className="main-container">
       <Card sx={{ maxWidth: 345 }}>
@@ -48,29 +37,12 @@ const Cards = () => {
         <CardMedia component="img" height="194" image={coffee} alt="Coffee" />
         <CardContent>
           <Typography variant="body2" color="text.secondary">
-            This dirnk is impacable for the people giving them the boost while
+            This drink is impacable for the people giving them the boost while
             they work and help them stay awake.
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
-          <Tooltip
-            PopperProps={{
-              disablePortal: true,
-            }}
-            onClose={handleTooltipClose}
-            open={open}
-            disableHoverListener
-            disableTouchListener
-            title="Add"
-            arrow
-          >
-            <IconButton onClick={handleTooltipOpen} aria-label="like">
-              <ThumbUpSharp />
-            </IconButton>
-          </Tooltip>
-          <IconButton aria-label="add to favorites">
-            <FavoriteIcon color="error" />
-          </IconButton>
+          <TooltipBody />
           <IconButton aria-label="share">
             <ShareIcon color="primary" />
           </IconButton>

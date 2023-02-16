@@ -15,6 +15,16 @@ const TooltipBody = () => {
   };
 
   const [icon, setIcon] = useState("");
+
+  const [open, setOpen] = useState(false);
+
+  const handleTooltipClose = () => {
+    setOpen(false);
+  };
+
+  const handleTooltipOpen = () => {
+    setOpen(true);
+  };
   return (
     <>
       <div>
@@ -22,18 +32,28 @@ const TooltipBody = () => {
           PopperProps={{
             disablePortal: true,
           }}
+          sx={{ bgcolor: "white" }}
           title={
             <ReactionBarSelector
               style={{
-                backgroundColor: "transparent",
                 width: "100%",
               }}
               onSelect={(e) => setIcon(e)}
             />
           }
-          arrow
+          onClose={() => handleTooltipClose()}
+          open={open}
+          disableFocusListener
+          disableHoverListener
+          disableTouchListener
         >
-          <IconButton onClick={(e) => handleChange(e)} aria-label="emoji">
+          <IconButton
+            onClick={(e) => {
+              handleChange(e);
+              handleTooltipOpen();
+            }}
+            aria-label="emoji"
+          >
             {icon === "satisfaction" ? (
               <ThumbUpSharp color="primary" />
             ) : icon === "love" ? (

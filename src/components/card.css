@@ -17,7 +17,25 @@
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.css-ja5taz-MuiTooltip-tooltip {
-  border-radius: 27px !important;
-  padding: 0 !important;
+.MuiTooltip-tooltip {
+  background-color: #00000000 !important;
+}
+
+.emoji-main-style {
+  display: flex;
+  width: fit-content;
+}
+
+.emoji-style {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  font-size: 48 !important;
+  cursor: pointer;
+}
+
+.emoji-img {
+  width: 24px;
+  height: 24px;
 }
